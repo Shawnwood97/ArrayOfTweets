@@ -10,3 +10,9 @@ var tweets = [
   `Do they allow loud laughing in Hawaii, or just a low ha?`,
   `Millenials. Walking around like they rent the place.`,
 ];
+
+var tweetsLength = tweets.length;
+
+for (i = 0; i < tweetsLength; i++) {
+  console.log(tweets[i]);
+}
