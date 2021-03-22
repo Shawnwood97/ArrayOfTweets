@@ -13,7 +13,7 @@ var tweets = [
     tweet: `Women get to smell like real things (vanilla, lavender) but men have to smell like concepts. What the fuck is "cool sport rush"`,
     username: `@ronnui_`,
     created_at: `08-15-2020`,
-    age: 32,
+    age: 17,
   },
 
   {
@@ -41,7 +41,7 @@ var tweets = [
     tweet: `To the guy who stole my antidepressants, I hope you're happy now.`,
     username: `@EddyElfenbein`,
     created_at: `07-29-2018`,
-    age: 55,
+    age: 18,
   },
 
   {
@@ -62,7 +62,7 @@ var tweets = [
     tweet: `Do they allow loud laughing in Hawaii, or just a low ha?`,
     username: `@trawwithtweets`,
     created_at: `11-15-2020`,
-    age: 36,
+    age: 16,
   },
 
   {
@@ -73,14 +73,34 @@ var tweets = [
   },
 ];
 
+// Function to check if age is greater than or equal to 18, if so, return true. if not, return false.
+// added error else block
+function checkIfBoomer(tweet) {
+  if (tweet.age >= 18) {
+    return true;
+  } else if (tweet.age < 18) {
+    return false;
+  } else {
+    console.log("ERROR");
+  }
+}
+
+// the filter method will store the full objects that return true for the age Key Value Pair.
+var defBoomer = tweets.filter(checkIfBoomer);
+
+// console logging new object.
+console.log(defBoomer);
+
 // crates a variable for the number of objects in the array.... this is still called an array, right? an array of objects?????
-var tweetsLength = tweets.length;
+
+// var tweetsLength = tweets.length;
 
 // for loop that iterates on "i" as long as it is less than the tweetsLength variable(10). and runs the console log.
 // used /n to create new lines in the console to make it more readable.
 // [i] accesses the object at the current position of the i variable. "i++" increments on the variable i after each loop.
-for (var i = 0; i < tweetsLength; i++) {
-  console.log(
-    `Tweet: ${tweets[i].tweet} \n By: ${tweets[i].username} \n On: ${tweets[i].created_at} \n User Age: ${tweets[i].age}`
-  );
-}
+
+// for (var i = 0; i < tweetsLength; i++) {
+//   console.log(
+//     `Tweet: ${tweets[i].tweet} \n By: ${tweets[i].username} \n On: ${tweets[i].created_at} \n User Age: ${tweets[i].age}`
+//   );
+// }
