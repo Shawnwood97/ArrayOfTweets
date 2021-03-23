@@ -73,15 +73,10 @@ var tweets = [
   },
 ];
 
-// Function to check if age is greater than or equal to 18, if so, return true. if not, return false.
-// added error else block
+// Function to check if age is greater than or equal to 18, if so, return true.
 function checkIfBoomer(tweet) {
   if (tweet.age >= 18) {
     return true;
-  } else if (tweet.age < 18) {
-    return false;
-  } else {
-    console.log("ERROR");
   }
 }
 
